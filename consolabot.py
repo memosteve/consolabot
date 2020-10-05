@@ -45,9 +45,9 @@ else:
 		deal= " no es una Oferta"
 
 twitt= intro+Nombre+" es de "+Precio+deal+final+link+" "+timestamp
-print(twitt)
+# print(twitt)
 
-# api.update_status(status=twitt)
+api.update_status(status=twitt)
 
 link= 'https://www.sears.com.mx/producto/233159/preventa-consola-playstation-5/'
 driver.get(link);
@@ -68,8 +68,8 @@ else:
 		deal= " no es una Oferta"
 
 twitt= intro+Nombre+" es de "+Precio+deal+final+link+" "+timestamp
-print(twitt)
-# api.update_status(status=twitt)
+# print(twitt)
+api.update_status(status=twitt)
 
 link= 'https://www.sanborns.com.mx/resultados/q=playstation%205/1'
 driver.get(link);
@@ -90,8 +90,8 @@ else:
 		deal= " no es una Oferta"
 
 twitt= intro+Nombre+" es de "+Precio+deal+final+link+" "+timestamp
-print(twitt)
-# api.update_status(status=twitt)
+# print(twitt)
+api.update_status(status=twitt)
 
 link= 'https://www.sams.com.mx/search/Ntt=%22Playstation-5%22'
 driver.get(link);
@@ -112,8 +112,7 @@ else:
 		deal= " no es una Oferta"
 
 twitt= intro+Nombre+" es de "+Precio+deal+final+link+" "+timestamp
-print(twitt)
-# api.update_status(status=twitt)
+api.update_status(status=twitt)
 driver.quit()
 
 
