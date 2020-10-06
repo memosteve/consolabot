@@ -25,7 +25,14 @@ precio_digital=11499
 precio_normal=13999
 deal=" es una Oferta"
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.binary_location = GOOGLE_CHROME_PATH
+
+driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 link= 'https://www.elpalaciodehierro.com/playstation-consola-playstation-5-825-gb-blanco-41282468.html'
 driver.get(link);
 driver.implicitly_wait(10)
